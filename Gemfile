@@ -9,6 +9,9 @@ gem 'mysql'
 #gem 'activerecord-mysql-adapter'
 gem 'json'
 
+group :development, :test do
+  gem 'rspec-rails', '2.11.0'
+end 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -20,6 +23,13 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :test do
+	gem 'capybara', '1.1.2'
+end
+group :production do
+	gem 'pg', '0.12.2'
 end
 
 gem 'travis-lint'
